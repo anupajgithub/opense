@@ -535,35 +535,35 @@
           <div class="col-12">
             <div class="nav">
               <ul class="menu5" style="padding-left: 5px; padding-right: 5px">
-                <li class="nav-link active" onclick="setActive(event)">
+                <li class="nav-link">
                   <a
                     href="index.html"
                     style="color: #fff; text-decoration: none"
                     >Download</a
                   >
                 </li>
-                <li class="nav-link" onclick="setActive(event)">
+                <li class="nav-link">
                   <a
-                    href="catagories.html"
+                    href="categories.html"
                     style="color: #fff; text-decoration: none"
                     >Categories</a
                   >
                 </li>
-                <li class="nav-link" onclick="setActive(event)">
+                <li class="nav-link">
                   <a
                     href="career.html"
                     style="color: #fff; text-decoration: none"
                     >Careers</a
                   >
                 </li>
-                <li class="nav-link" onclick="setActive(event)">
+                <li class="nav-link">
                   <a
                     href="opinion.html"
                     style="color: #fff; text-decoration: none"
                     >Opinions</a
                   >
                 </li>
-                <li class="nav-link" onclick="setActive(event)">
+                <li class="nav-link">
                   <a
                     href="support.html"
                     style="color: #fff; text-decoration: none"
@@ -1012,16 +1012,27 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      function setActive(event) {
-        // Remove active class from all links
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all nav links
         var links = document.querySelectorAll(".nav-link");
-        links.forEach(function (link) {
-          link.classList.remove("active");
-        });
 
-        // Add active class to the clicked link
-        event.target.classList.add("active");
-      }
+        // Get current page URL path
+        var currentPath = window.location.pathname;
+
+        // Loop through each link
+        links.forEach(function (link) {
+          var linkPath = link.querySelector("a").getAttribute("href");
+
+          // Check if the current page matches the link's href
+          if (currentPath.includes(linkPath)) {
+            // If match, add 'active' class to this link
+            link.classList.add("active");
+          } else {
+            // Remove 'active' class from non-matching links
+            link.classList.remove("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
