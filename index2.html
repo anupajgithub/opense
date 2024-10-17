@@ -98,15 +98,18 @@
     ></script>
 
     <script>
-      function showPopup(platform) {
-        var modalBody = document.getElementById("modalBody");
-        if (platform === "android") {
-          modalBody.innerHTML =
-            "The Android app download will be available soon!";
-        } else if (platform === "ios") {
-          modalBody.innerHTML = "The iOS app download will be available soon!";
-        }
-      }
+      document.addEventListener("DOMContentLoaded", function () {
+        var myModal = new bootstrap.Modal(
+          document.getElementById("downloadModal"),
+          {}
+        );
+        var buttons = document.querySelectorAll(".download-btn");
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            myModal.show();
+          });
+        });
+      });
     </script>
   </body>
 </html>

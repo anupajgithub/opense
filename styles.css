@@ -7,6 +7,17 @@
 .modal-header {
   border-bottom: none;
 }
+.image-container {
+  top: -33px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 635px;
+  left: 57px;
+}
 
 .modal-body img {
   max-width: 200px;
@@ -106,18 +117,19 @@
 }
 
 .image-container {
+  top: 20px;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: 700px;
-
+  height: 635px;
+  left: 57px;
 }
 
 .image-1, .image-2 {
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   filter: brightness(0.9);
   opacity: 2;
@@ -133,15 +145,21 @@
   left: 13%;
 }
 .image-1{
-  top: 130px;
+  top: 85px;
 }
 @media (max-width: 768px) {
-  .hcontainer {
+  .fcontainer {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
+.cta{
+  position: absolute;
+    top: 32px;
+    flex: 1;
+    text-align: center;
+    color: white;
+}
   /* Ensure tcontainer comes first */
   .tcontainer {
     order: 1;
@@ -167,8 +185,16 @@
   }
 
   .image-1, .image-2 {
-      max-width: 100%;
-      height: auto;
+    max-width: 100%;
+    height: 367px;
+  }
+  .image-2{
+    position: absolute;
+    top: 65%;
+    left: 28%;
+  }
+  .image-1{
+    top: 203px;
   }
 }
 
@@ -183,9 +209,11 @@
   }
 
   /* Ensure tcontainer comes first */
-  .cta {
-    order: 1;
-    width: 100%;
+  .cta { 
+    position: absolute;
+        top: 91px;
+        order: 1;
+        width: 100%;
   }
 
   .pic {
@@ -213,11 +241,13 @@
   
 .image-2 {
   position: absolute;
-  top: 56%;
-    left: 21%;
+  top: 63%;
+  left: 19%;
 }
 .image-1{
-  top: 166px;
+  top: 348px;
+  /* left: -35px; */
+  right: 20%;
  
 }
 }

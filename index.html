@@ -32,7 +32,7 @@
       }
       .ncontainer {
         /* padding-left: 241px;
-              padding-right: 241px; */
+                    padding-right: 241px; */
         width: 100%;
         margin: 0 auto;
       }
@@ -73,7 +73,26 @@
         background-color: #0a1f44;
         border-radius: 25px;
       }
-
+      @media (max-width: 1024px) {
+        .navbar-brand {
+          width: 58%;
+          left: 23%;
+        }
+        .ncontainer {
+          width: 60%;
+          left: 22%;
+        }
+      }
+      @media (max-width: 1200px) {
+        .navbar-brand {
+          width: 100px;
+          height: 48px;
+        }
+        .ncontainer {
+          width: 65%;
+          left: 19%;
+        }
+      }
       @media (max-width: 768px) {
         .navbar-brand {
           width: 100px;
@@ -83,6 +102,7 @@
           padding-left: 10px;
           padding-right: 10px;
           width: 100%;
+          bottom: 5px;
           top: 0; /* Ensure it sticks to the top in mobile */
           position: fixed; /* Keep it fixed at the top */
           z-index: 999; /* High z-index to ensure visibility */
@@ -91,11 +111,11 @@
           transform: translateY(0); /* Show navbar when scrolled up */
         }
         .nav {
-          width: 100%;
+          width: 96%;
           position: fixed;
-          bottom: 0; /* Stick to the bottom */
-          left: 0;
-          right: 0;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
           z-index: 999;
         }
         .menu5 {
@@ -124,6 +144,7 @@
           padding-left: 10px;
           padding-right: 10px;
           width: 100%;
+          bottom: 5px;
           top: 0; /* Ensure it sticks to the top in mobile */
           position: fixed; /* Keep it fixed at the top */
           z-index: 999; /* High z-index to ensure visibility */
@@ -132,11 +153,11 @@
           transform: translateY(0); /* Show navbar when scrolled up */
         }
         .nav {
-          width: 100%;
+          width: 96%;
           position: fixed;
-          bottom: 0; /* Stick to the bottom */
-          left: 0;
-          right: 0;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
           z-index: 999;
         }
         .menu5 {
@@ -164,11 +185,11 @@
         height: 100vh; /* Adjust height as needed */
       }
       .hcontainer {
-        height: 70vh;
+        height: 80vh;
         position: relative;
         text-align: left;
-        padding: 50px;
-        background: linear-gradient(to bottom, #2c3e50, #fafbfc);
+        padding: 100px;
+        background: linear-gradient(to bottom, #243c54, #fff);
       }
       .title {
         font-size: 48px;
@@ -186,17 +207,17 @@
         margin-top: 10px;
       }
       /* .btn-download {
-              background-color: #007bff;
-              color: #fff;
-              font-size: 18px;
-              padding: 10px 20px;
-              border: none;
-              border-radius: 5px;
-              margin-top: 20px;
-            } */
+                    background-color: #007bff;
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    margin-top: 20px;
+                  } */
       .checkbox {
         margin-top: 10px;
-        color: #2c3e50;
+        color: #000000;
       }
       .image-container {
         position: absolute;
@@ -215,7 +236,7 @@
       }
       .speech-bubble {
         position: absolute;
-        background-color: #fff;
+        /* background-color: #fff; */
         border-radius: 20px;
         padding: 10px 20px;
         font-size: 16px;
@@ -226,38 +247,75 @@
         background-color: #007bff;
         color: #fff;
         top: 250px;
-        left: 186px;
+        text-align: center;
+        width: 208px;
+        font-weight: bolder;
+        font-size: x-large;
+        left: 50px;
         animation: slideInUp 2s ease-in-out;
       }
+
       .speech-bubble-no {
         background-color: #ff4d4d;
         color: #fff;
-        top: 100px;
-        right: 150px;
+        top: 90px;
+        width: 30%;
+        /* position: absolute; */
+        text-align: center;
+        font-weight: bolder;
+        font-size: x-large;
+
+        right: 40px;
         animation: slideInUp 2s ease-in-out;
       }
       .speech-bubble-tata {
+        position: absolute;
         height: 90px;
         width: 350px;
         top: 151px;
         left: 200px;
         animation: fadeIn 2s ease-in-out;
       }
+      .logo-1 {
+        /* height: 90px;
+              width: 350px; */
+        position: absolute;
+        opacity: 0.5;
+
+        top: 16px;
+        left: 250px;
+        animation: slideInUp 2s ease-in-out;
+      }
+
+      .logo-2 {
+        position: absolute;
+        opacity: 0.8;
+        top: 231px;
+        left: 564px;
+        animation: slideInUp 2s ease-in-out;
+      }
+      .logo-3 {
+        position: absolute;
+        opacity: 1.1;
+        top: 350px;
+        left: 25px;
+        animation: slideInUp 2s ease-in-out;
+      }
       .phone-image {
         top: 360px;
-        left: 130px;
+        left: 70px;
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 600px;
+        width: 650px;
         z-index: 1;
         height: auto;
       }
       .girl-image {
         position: absolute;
-        top: 45px;
+        top: 18px;
         right: 200px;
-        width: 300px;
+        width: 359px;
         height: 500px;
         z-index: 1;
       }
@@ -354,22 +412,52 @@
         .speech-bubble-tata {
           font-size: 14px;
         }
-
+        .speech-bubble-tata {
+          font-size: 14px;
+          top: 89px;
+          left: 224px;
+          width: 287px;
+        }
         .speech-bubble-yes {
-          left: 50%;
-          top: 150px;
+          left: 28%;
+          top: 173px;
           transform: translateX(-50%);
         }
 
         .speech-bubble-no {
-          top: 80px;
+          top: 30px;
           transform: translateX(-50%);
+          left: 550px;
+        }
+        .logo-1 {
+          position: absolute;
+          opacity: 0.5;
+          top: 1px;
+          left: 226px;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-2 {
+          position: absolute;
+          opacity: 0.8;
+          top: 153px;
+          left: 503px;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-3 {
+          position: absolute;
+          opacity: 1.1;
+          top: 315px;
+          left: 70px;
+          animation: slideInUp 2s ease-in-out;
         }
       }
       @media (max-width: 480px) {
         .hcontainer {
           padding: 20px;
           height: 80vh;
+        }
+        .image-container {
+          margin: 25px;
         }
 
         .phone-image {
@@ -385,16 +473,47 @@
         .speech-bubble-tata {
           font-size: 12px;
         }
-
+        .speech-bubble-tata {
+          font-size: 14px;
+          top: 17%;
+          left: 20%;
+          width: 196px;
+        }
         .speech-bubble-yes {
-          left: 35%;
-          top: 120px;
+          left: 18%;
+          top: 25%;
+          width: 88px;
           transform: translateX(-50%);
         }
 
         .speech-bubble-no {
-          top: 60px;
+          top: 10%;
+          left: 75%;
           transform: translateX(-50%);
+        }
+        .logo-2 {
+          position: absolute;
+          opacity: 1.8;
+          top: 33%;
+          left: 6%;
+          height: -2px;
+          width: 16%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-1 {
+          position: absolute;
+          opacity: 0.5;
+          width: 16%;
+          top: 6%;
+          left: 30%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-3 {
+          position: absolute;
+          opacity: 0.8;
+          top: 24%;
+          left: 66%;
+          animation: slideInUp 2s ease-in-out;
         }
       }
 
@@ -517,6 +636,37 @@
           top: 50%;
         }
       }
+      /* Custom non-clickable checkbox styles */
+      .form-check-input {
+        width: 20px;
+        height: 20px;
+        pointer-events: none; /* Disable clicking */
+        background-color: #02214f !important; /* Blue background */
+        border: none; /* Remove default border */
+      }
+
+      /* Ensure the checkmark inside the checkbox is visible */
+      .form-check-input:checked {
+        background-color: #02214f !important; /* Blue background for checked state */
+        border-color: #02214f !important;
+      }
+
+      /* Style for the checkmark (optional customization) */
+      .form-check-input:checked::after {
+        width: 0.8em;
+        height: 0.8em;
+        background-color: white;
+      }
+      .form-check-input:disabled {
+        pointer-events: none;
+        filter: none;
+        opacity: 1;
+      }
+      form-check-input:disabled ~ .form-check-label,
+      .form-check-input[disabled] ~ .form-check-label {
+        cursor: default;
+        opacity: 1;
+      }
     </style>
   </head>
 
@@ -629,9 +779,9 @@
     </div>
 
     <div class="hcontainer">
-      <div class="tcontainer">
-        <h2 class="display-3 fw-bold mb-3" style="color: #f5efef">Ab Kamao</h2>
-        <h2 class="display-3 fw-bold mb-3" style="color: #02214f">
+      <div class="tcontainer" style="padding-top: 5%">
+        <h2 class="display-3 fw-bold mb-0" style="color: #f5efef">Ab Kamao</h2>
+        <h2 class="display-3 fw-bold mb-0" style="color: #02214f">
           Opinion Se
         </h2>
         <p class="fs-4 mb-5">
@@ -647,8 +797,24 @@
           </button>
         </div>
         <div class="checkbox">
-          <input checked="" id="ageCheck" type="checkbox" />
-          <label for="ageCheck">For 18+ Years Only</label>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="blueCheckbox"
+            checked
+            disabled
+          />
+          <label class="form-check-label" for="blueCheckbox">
+            For 18+ Years Only
+          </label>
+          <!-- <input
+            checked=""
+            id="ageCheck"
+            type="checkbox"
+            disabled
+            style="background-color: #02214f"
+          />
+          <label for="ageCheck">For 18+ Years Only</label> -->
         </div>
       </div>
       <div class="image-container">
@@ -664,9 +830,19 @@
         />
         <div class="speech-bubble speech-bubble-yes">Yes $4.00</div>
         <div class="speech-bubble speech-bubble-no">No $6.00</div>
-        <!-- <div class="speech-bubble speech-bubble-tata">
+        <div class="speech-bubble-tata">
           <img src="./img/Group 727 1.png" alt="" />
-        </div> -->
+        </div>
+
+        <div class="logo-1">
+          <img src="./img/Group 728 3 (1).png" alt="" />
+        </div>
+        <div class="logo-2">
+          <img src="./img/Group 728 1 (2).png" alt="" />
+        </div>
+        <div class="logo-3">
+          <img src="./img/Group 728 3 (2).png" alt="" />
+        </div>
       </div>
     </div>
     <div class="youtube section" style="text-align: center">
@@ -774,35 +950,20 @@
               <div class="text">crypto</div>
             </div>
           </div>
-          <div
-            class="mcontainer"
-            style="
-              position: absolute; /* Add this */
-              top: 62%; /* Add this */
-              left: 50%; /* Add this */
-              transform: translate(-50%, -50%);
-              z-index: 5;
-
-              width: 80%; /* Adjust width as needed */
-              height: 80%; /* Adjust height as needed */
-              margin: 0 auto; /* Center the container */
-              max-width: 700px; /* Set a maximum width */
-              max-height: 350px; /* Set a maximum height */
-            "
-          >
+          <div class="mcontainer">
             <style>
-              @media (max-width: 768px) {
-                .mcontainer {
-                  width: 90%;
-                  height: 90%;
-                }
-              }
+              .mcontainer {
+                position: absolute; /* Add this */
+                top: 50%; /* Add this */
+                left: 50%; /* Add this */
+                transform: translate(-50%, -50%);
+                /* z-index: 5; */
 
-              @media (max-width: 480px) {
-                .mcontainer {
-                  width: 100%;
-                  height: 100%;
-                }
+                width: 80%; /* Adjust width as needed */
+                height: 80%; /* Adjust height as needed */
+                margin: 0 auto; /* Center the container */
+                max-width: 700px; /* Set a maximum width */
+                max-height: 350px; /* Set a maximum height */
               }
               .mcontainer img {
                 position: absolute;
@@ -822,9 +983,50 @@
                 object-fit: cover;
                 border-radius: 54px;
               }
+              @media (max-width: 768px) {
+                .mcontainer img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover; /* Adjust object-fit as needed */
+                }
+
+                .mcontainer iframe {
+                  position: absolute;
+                  top: 7px;
+                  left: 6px;
+                  width: 98%;
+                  height: 96%;
+                  object-fit: cover;
+                  border-radius: 54px;
+                }
+              }
+
+              @media (max-width: 480px) {
+                .mcontainer img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 162px;
+                  width: 344px;
+                  object-fit: cover; /* Adjust object-fit as needed */
+                }
+
+                .mcontainer iframe {
+                  position: absolute;
+                  top: 4px;
+                  left: 6px;
+                  width: 100%;
+                  height: 44%;
+                  object-fit: cover;
+                  border-radius: 11px;
+                }
+              }
             </style>
             <img
-              src="./New folder/image/i-phone-removebg-preview.png"
+              src="/img/i-phone-removebg-preview.png"
               alt="PNG Image"
               class="png-image"
             />
@@ -840,77 +1042,65 @@
         </div>
       </div>
     </div>
-    <iframe
-      src="iphone.html"
-      style="width: 100%; height: 800px; border: none"
-      scrolling="no"
-    ></iframe>
     <style>
-      @media (max-width: 480px) {
-        .grid1 {
-          height: 900px;
+      #iframe1,
+      #iframe2,
+      #iframe3,
+      #iframe4 {
+        width: 100%; /* Full width for all iframes */
+        border: none;
+      }
+
+      /* Specific height for each iframe on desktop */
+      #iframe1 {
+        height: 850px;
+      }
+      #iframe2 {
+        height: 600px;
+      }
+      #iframe3 {
+        height: 800px;
+      }
+      #iframe4 {
+        height: 600px;
+      }
+      @media screen and (max-width: 480px) {
+        #iframe1 {
+          height: 700px; /* Adjusted height for mobile */
+        }
+        #iframe2 {
+          height: 1024px; /* Adjusted height for mobile */
+        }
+        #iframe3 {
+          height: 700px; /* Adjusted height for mobile */
+        }
+        #iframe4 {
+          height: 750px; /* Adjusted height for mobile */
+        }
+      }
+      @media screen and (max-width: 680px) {
+        #iframe1 {
+          height: 850px; /* Adjusted height for mobile */
+        }
+        #iframe2 {
+          height: 1024px; /* Adjusted height for mobile */
+        }
+        #iframe3 {
+          height: 700px; /* Adjusted height for mobile */
+        }
+        #iframe4 {
+          height: 750px; /* Adjusted height for mobile */
         }
       }
     </style>
-    <iframe
-      class="grid1"
-      src="index1.html"
-      style="width: 100%; height: 500px; border: none"
-      scrolling="no"
-    ></iframe>
-    <iframe
-      src="card.html"
-      style="width: 100%; height: 800px; border: none"
-      scrolling="no"
-    ></iframe>
-    <iframe
-      src="index2.html"
-      style="width: 100%; height: 650px; border: none"
-      scrolling="no"
-    ></iframe>
 
-    <!-- <div id="page2-content"></div>
-    <script>
-      function loadPage() {
-        fetch("iphone.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("page2-content").innerHTML = data;
-          });
-      }
-      window.onload = loadPage;
-    </script> -->
-    <!-- <iframe
-      src="C:\Users\anup\OneDrive\Desktop\aspizen\1st project\iphone.html"
-      style="
-        top: 20;
-        /* width: max-content; */
-        /* width: fit-content; */
-        /* width: auto; */
-        height: 730px;
-        width: 1600px;
-        margin-top: 55px;
-      "
-      seamless
-    ></iframe> -->
-    <!-- <iframe
-      src="C:\Users\anup\OneDrive\Desktop\aspizen\1st project\index.html"
-      style="
-        top: 20;
-        /* width: max-content; */
-        /* width: fit-content; */
-        /* width: auto; */
-        height: 730px;
-        width: 1600px;
-        margin-top: 55px;
-      "
-      seamless
-    ></iframe> -->
-    <script>
-      $(function () {
-        $("#includedContent").load("card.html");
-      });
-    </script>
+    <!-- Iframes -->
+    <iframe src="iphone.html" id="iframe1" scrolling="no"></iframe>
+    <iframe src="index1.html" id="iframe2" scrolling="no"></iframe>
+    <iframe src="card.html" id="iframe3" scrolling="no"></iframe>
+    <iframe src="index2.html" id="iframe4" scrolling="no"></iframe>
+
+    <!-- JavaScript for dynamically adjusting the height of each iframe -->
 
     <script>
       //nav bar scripts start
@@ -935,7 +1125,7 @@
 
       // Create a play button
       const playButton = document.createElement("button");
-      playButton.textContent = "Play";
+
       playButton.style.position = "absolute";
       playButton.style.top = "50%";
       playButton.style.left = "50%";

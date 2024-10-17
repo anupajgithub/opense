@@ -61,6 +61,8 @@
         border-radius: 15px;
         width: 300px;
         height: 200px;
+        padding: 10px;
+        text-align: center;
       }
 
       /* Default bubble color */
@@ -118,11 +120,7 @@
       .custom-nav {
         display: flex;
         justify-content: center;
-        height: 20px;
-        background-color: #c2eaea;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
+        margin-top: 20px;
       }
 
       .custom-nav button {
@@ -140,6 +138,20 @@
       }
 
       /* Responsive styling for speech bubbles */
+      @media (max-width: 1200px) {
+        .speech-bubble {
+          width: 270px;
+          height: 180px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .speech-bubble {
+          width: 240px;
+          height: 160px;
+        }
+      }
+
       @media (max-width: 768px) {
         .slider {
           margin: 10;
@@ -148,8 +160,8 @@
           display: flex;
         }
         .speech-bubble {
-          width: 250px;
-          height: 150px;
+          width: 220px;
+          height: 140px;
         }
 
         .center-card {
@@ -173,18 +185,21 @@
         .center-card {
           transform: scale(1.05); /* Slightly reduce scale */
         }
+        .p {
+          margin-top: 42px;
+    margin-right: 30px;
+    margin-left: 30px;
+
+}
       }
     </style>
   </head>
   <body>
     <div style="font-size: larger">
       <h1 style="color: #002855">User Opinions</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        vitae exercitationem,
-        <br />repudiandae consequuntur sunt deserunt ab odio magni nisi pariatur
-        placeat totam, <br />necessitatibus odit, unde molestias dicta numquam
-        quibusdam veniam.
+      <p class="p">
+       In a world where opinions can change the game,see what players
+        <br />have to say about their journey of strategy , competition,and <br />excitement.
       </p>
     </div>
     <div class="slider owl-carousel">
@@ -238,13 +253,24 @@
         autoplay: true,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
-        items: 3, // Always show 3 items
+        items: 3, // Show 3 items by default
         margin: 10,
         center: true,
         dots: false, // Disable default dots
         smartSpeed: 1000, // Set transition speed to 1000ms (1 second)
         animateOut: "fadeOut",
         animateIn: "fadeIn",
+        responsive: {
+          0: {
+            items: 1, // Show 1 item on small screens
+          },
+          600: {
+            items: 2, // Show 2 items on tablets
+          },
+          1000: {
+            items: 3, // Show 3 items on desktops
+          },
+        },
         onInitialized: colorCenterCard,
         onTranslated: colorCenterCard,
       });
@@ -271,5 +297,21 @@
         centerCardItem.addClass("center-card");
       }
     </script>
+    <script>
+      // Post the height to the parent window after the content is fully loaded
+      window.onload = function () {
+        // Send the body scroll height to the parent window
+        var height = document.body.scrollHeight;
+        window.parent.postMessage({ type: "setHeight", height: height }, "*");
+      };
+
+      // Optionally, observe changes in the content height and adjust dynamically
+      const observer = new ResizeObserver(() => {
+        var height = document.body.scrollHeight;
+        window.parent.postMessage({ type: "setHeight", height: height }, "*");
+      });
+
+      observer.observe(document.body);
+    </script>
   </body>
-</html>
+</html
